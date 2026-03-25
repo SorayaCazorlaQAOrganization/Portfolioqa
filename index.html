@@ -164,13 +164,13 @@ through <strong>SQL</strong>, and test automation with <strong>Python</strong>,
     <label for="email"> Email:</label>
     <input type="email" id="email" Name="email" placeholder="Email" required/>
 
-
-    <select id="subject">
-      <option value="">---</option>
-      <option value="info">Information</option>
-      <option value="job">Job offer</option>
-      <option value="other">Other</option>
-    </select>
+    <label for="subject">Choose a subject:</label>
+  <select id="subject" name="subject" required>
+    <option value="" selected disabled>---</option>
+    <option value="information">Information</option> 
+    <option value="job offer">Job offer</option> 
+    <option value="other">Other</option> 
+  </select>
     <textarea id="message" rows="4" placeholder="Write your message"></textarea>
     <button id="send" type="submit">
       <i class="fa fa-paper-plane"></i> 
