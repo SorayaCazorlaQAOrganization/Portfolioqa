@@ -21,7 +21,7 @@ Este portafolio web muestra mis proyectos de **QA**. Incluye un **formulario de 
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
-![SQL](https://img.shields.io/badge/sql-%23007ACC.svg?style=for-the-badge&logo=database&logoColor=white)
+![SQL](https://igvyycuzenqfitmvbezd.supabase.co)
 
 ![Postman](https://img.shields.io/badge/postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white)
 
@@ -37,7 +37,7 @@ Se ha creado una base de datos en Supabase para almacenar los datos enviados des
 
 ## 🗄 API de Formulario
 Se ha generado una API que permite agregar, editar, consultar y eliminar datos de la base de datos creada en supabase.
-- URL API (requiere acceso): [Supabase API](https://vtizuqohukyyxvcshmbs.supabase.co)  
+- URL API (requiere acceso): [Supabase API](https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form)  
 - Documentación de la API: [Documentación API](./apidoc.pdf) 
 ---
 
@@ -46,7 +46,7 @@ Se ha generado una API que permite agregar, editar, consultar y eliminar datos d
 Se realizaron pruebas exploratorias en navegadores web y móviles para asegurar el correcto funcionamiento de la interfaz y la interacción con el usuario.
 
 ### Pruebas de API
-- Colección en POSTMAN (requiere acceso): [POSTMAN Collection](https://www.postman.com/bootcampqatesting/api-usuarios/collection/x5mwyvf/api-de-usuarios) 
+- Colección en POSTMAN (requiere acceso): [POSTMAN Collection](https://sorayacazorlag-1947955.postman.co/workspace/API-USUARIOS~b569c925-1fd8-4772-bc83-0b5e58f3f5ed/collection/53399983-437af41e-de52-4100-8a25-5256d0813a40?action=share&source=copy-link&creator=53399983) 
 Se probó la **API del formulario de contacto** y se validó el correcto almacenamiento de los datos en la base de datos. 
 - Se probaron las operaciones **GET, POST, PATCH y DELETE**, verificando respuestas correctas y manejo de errores.  
 - Se implementó un **flujo de integración continua** con GitHub Actions, ejecutando automáticamente las pruebas de API mediante Newman cada semana. 
