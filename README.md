@@ -21,8 +21,7 @@ Este portafolio web muestra mis proyectos de **QA**. Incluye un **formulario de 
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
-![SQL](https://supabase.com/dashboard/project/igvyycuzenqfitmvbezd)
-
+![SQL](https://igvyycuzenqfitmvbezd.supabase.co)
 ![Postman](https://img.shields.io/badge/postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white)
 
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white)
