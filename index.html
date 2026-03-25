@@ -157,9 +157,14 @@ through <strong>SQL</strong>, and test automation with <strong>Python</strong>,
   <h2 id="contacttitle">
     <i class="fa fa-envelope"></i> Contact
   </h2>
-  <form id="contactForm" onsubmit="return enviarFormulario(event)">
-    <input id="name" type="text" placeholder="Name" />
-    <input id="email" type="email" placeholder="Email" />
+  <form action="/submit" method="post">
+    <label for="name"> Name:</label>
+    <input type="text" id="Name" name="Name" placeholder="Name"/>
+
+    <label for="email"> Email:</label>
+    <input type="email" id="email" Name="email" placeholder="Email" required/>
+
+
     <select id="subject">
       <option value="">---</option>
       <option value="info">Information</option>
@@ -168,7 +173,7 @@ through <strong>SQL</strong>, and test automation with <strong>Python</strong>,
     </select>
     <textarea id="message" rows="4" placeholder="Write your message"></textarea>
     <button id="send" type="submit">
-      <i class="fa fa-paper-plane"></i> Send
+      <i class="fa fa-paper-plane"></i> 
     </button>
   </form>
   <p id="formMessage"></p>
