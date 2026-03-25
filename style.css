@@ -6,8 +6,8 @@ body {
 }
 
 header {
-  background-color: rgb(7, 167, 153);
-  color: white;
+  background-color: rgb(243, 150, 75);
+  color: rgb(0, 0, 0);
   padding: 5rem;
   text-align: center;
 }
@@ -57,7 +57,7 @@ p {
 }
 
 a {
-  color: #02524e;
+  color: #000000;
   text-decoration: none;
 }
 
