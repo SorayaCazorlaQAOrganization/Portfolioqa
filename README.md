@@ -22,6 +22,7 @@ Este portafolio web muestra mis proyectos de **QA**. Incluye un **formulario de 
 ![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
 
 ![SQL](https://igvyycuzenqfitmvbezd.supabase.co)
+
 ![Postman](https://img.shields.io/badge/postman-%23FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white)
 
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white)
@@ -36,7 +37,7 @@ Se ha creado una base de datos en Supabase para almacenar los datos enviados des
 
 ## 🗄 API de Formulario
 Se ha generado una API que permite agregar, editar, consultar y eliminar datos de la base de datos creada en supabase.
-- URL API (requiere acceso): [Supabase API](https://vtizuqohukyyxvcshmbs.supabase.co)  
+- URL API (requiere acceso): [Supabase API](https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form)  
 - Documentación de la API: [Documentación API](./apidoc.pdf) 
 ---
 
