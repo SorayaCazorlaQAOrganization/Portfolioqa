@@ -21,7 +21,7 @@ WHERE subject = 'job' OR subject = 'information';
 SELECT * FROM form 
 WHERE name = 'Maria' OR name = 'Ana';
 
---Filter by email containing gmail and subject ‘job’--
+--Filter by email containing 'gmail' and subject ‘job’--
 SELECT * FROM form WHERE email LIKE '%gmail%'
 AND subject = 'job';
 
@@ -32,3 +32,4 @@ AND message LIKE '%test%';
 
 --Show the data sorted by email from A to Z--
 SELECT * FROM form ORDER BY email ASC;
+
