@@ -14,12 +14,10 @@ SELECT * FROM form WHERE name LIKE 'A%';
 SELECT * FROM form WHERE age BETWEEN 20 AND 30;
 
 --Filter by subject 'job' and 'information'--
-SELECT * FROM form
-WHERE subject = 'job' OR subject = 'information';
+SELECT * FROM form WHERE subject IN ('job', 'information');
 
 --Filter by name 'Maria' or 'Ana'--
-SELECT * FROM form 
-WHERE name = 'Maria' OR name = 'Ana';
+SELECT * FROM form WHERE name IN ('Maria', 'Ana');
 
 --Filter by email containing 'gmail' and subject ‘job’--
 SELECT * FROM form WHERE email LIKE '%gmail%'
@@ -32,4 +30,3 @@ AND message LIKE '%test%';
 
 --Show the data sorted by email from A to Z--
 SELECT * FROM form ORDER BY email ASC;
-
