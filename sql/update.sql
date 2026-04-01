@@ -1,7 +1,7 @@
---Change the email of ID 33 to 'lauratest@gmail.com'--
+--Change Laura's email to 'lauratest@gmail.com'--
 UPDATE form
 SET email = 'lauratest@gmail.com'
-WHERE id = 33;
+WHERE name = 'Laura';
 
 --Change age 20 to 21--
 UPDATE form
