@@ -1,0 +1,1597 @@
+{
+  "info": {
+    "_postman_id": "437af41e-de52-4100-8a25-5256d0813a40",
+    "name": "API FORM",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53399983",
+    "_collection_link": "https://go.postman.co/collection/53399983-437af41e-de52-4100-8a25-5256d0813a40?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET FORM",
+      "item": [
+        {
+          "name": "GET FORM",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM VALID NAME",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Response contains the name Laura\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(pm.environment.get(\"NAME\"));",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?name=eq.{{NAME}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "eq.{{NAME}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM VALID SUBJECT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Response contains subject\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(pm.environment.get(\"SUBJECT\"));",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?subject=eq.{{SUBJECT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "subject",
+                  "value": "eq.{{SUBJECT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM VALID AGE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Response contains age\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(pm.environment.get(\"AGE\"));",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?age=eq. {{AGE}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "age",
+                  "value": "eq. {{AGE}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM VALID EMAIL",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Response contains email\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(pm.environment.get(\"EMAIL\"));",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?email=eq.{{EMAIL}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "eq.{{EMAIL}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM WITHOUT AUTHENTICATION",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is unauthorized 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM INVALID NAME",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?name=Lorena",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Lorena"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM INVALID SUBJECT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?subject=question",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "subject",
+                  "value": "question",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM INVALID AGE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?age=cientotres",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "age",
+                  "value": "cientotres"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET FORM INVALID EMAIL",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  "",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?email=lore@gmail.com",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "lore@gmail.com"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "PATCH FORM",
+      "item": [
+        {
+          "name": "PATCH FORM VALID NAME EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Laura\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM VALID SUBJECT EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"subject\": \"job\"\n \n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM VALID AGE EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n \"age\": \"25\"\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM VALID EMAIL EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"juan@gmail.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM WITHOUT AUTHENTICATION",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Pedro\",\n  \"email\": \"pedro@gmail.com\",\n  \"subject\": \"job\",\n  \"age\": \"25\",\n  \"message\": \"mensaje de prueba\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM NULL NAME EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": NULL\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM NULL SUBJECT EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subject\": NULL\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM NULL AGE EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": NULL\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM NULL EMAIL EDIT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": NULL\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM INVALID AGE (<18)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"age\": \"17\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PATCH FORM RESTORE ORIGINAL DATA",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\n        \"id\": 31,\n        \"name\": \"Ana\",\n        \"email\": \"ana.test@mail.com\",\n        \"subject\": \"information\",\n        \"age\": 28,\n        \"message\": \"mensaje con test\"\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form?id=eq. {{IDEDIT}}",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "eq. {{IDEDIT}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "apikey",
+        "apikey": [
+          {
+            "key": "value",
+            "value": "{{PASSWORD}}",
+            "type": "string"
+          },
+          {
+            "key": "key",
+            "value": "apikey",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST FORM",
+      "item": [
+        {
+          "name": "POST FORM CHANGE ALL DATA",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"apitest\",\n  \"email\": \"apitest@gmail.com\",\n  \"subject\": \"other\",\n  \"age\": \"30\",\n  \"message\": \"test okey\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM REQUIRED FIELDS",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 201\", function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"apitest@hotmail.com\",\n  \"subject\": \"information\",\n  \"message\": \"apitestoptional\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM WITHOUT AUTHENTICATION",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"apitest@hotmail.com\",\n  \"subject\": \"information\",\n  \"message\": \"test required\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM WITHOUT EMAIL",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Sonia\"\n  \"subject\": \"job\",\n  \"age\": \"56\",\n  \"message\": \"without email\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM WITHOUT SUBJECT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Lorenzo\",\n  \"email\": \"loren@gmail.com\",\n  \"age\": \"35\",\n  \"message\": \"without subject\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST FORM WITHOUT MESSAGE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Juana\",\n  \"email\": \"juana@yahoo.es\",\n  \"subject\": \"information\",\n  \"age\": \"44\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{API_URL}}/form",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "apikey",
+        "apikey": [
+          {
+            "key": "value",
+            "value": "{{PASSWORD}}",
+            "type": "string"
+          },
+          {
+            "key": "key",
+            "value": "apikey",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "DELETE FORM",
+      "item": [
+        {
+          "name": "DELETE FORM APITEST NAME",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?name=eq. apitest",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "eq. apitest"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM APITESTOPTIONAL MESSAGE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 204\", function () {",
+                  "    pm.response.to.have.status(204);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?message=eq. apitestoptional",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "message",
+                  "value": "eq. apitestoptional"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM WITHOUT AUTHENTICATION",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 401\", function () {",
+                  "    pm.response.to.have.status(401);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?=",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM NULL EMAIL",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?email=",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM NULL SUBJECT",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?subject=",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "subject",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE FORM INVALID AGE",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"Status code is 400\", function () {",
+                  "    pm.response.to.have.status(400);",
+                  "});",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{API_URL}}/form?age=eq. treinta",
+              "host": [
+                "{{API_URL}}"
+              ],
+              "path": [
+                "form"
+              ],
+              "query": [
+                {
+                  "key": "age",
+                  "value": "eq. treinta"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "apikey",
+        "apikey": [
+          {
+            "key": "value",
+            "value": "{{PASSWORD}}",
+            "type": "string"
+          },
+          {
+            "key": "key",
+            "value": "apikey",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "value",
+        "value": "{{PASSWORD}}",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "apikey",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
