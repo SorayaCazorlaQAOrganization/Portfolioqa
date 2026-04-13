@@ -83,43 +83,45 @@
     <p>El <code>Key</code> lo obtienes desde Supabase en tu proyecto &gt; Settings &gt; API Keys.</p>
   
     <h2>GET - form - Obtener todos </h2>
-    <p><span class="method GET">GET</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/rest/v1/form</code></p>
+    <p><span class="method GET">GET</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form</code></p>
     <p>Devuelve todos los registros de la tabla <code>form</code>.</p>
 
     <h2>GET - form - Filtrar por campos</h2>
-    <p><span class="method GET">GET</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/rest/v1/form?campo=eq.valor&amp;campo2=eq.valor2</code></p>
+    <p><span class="method GET">GET</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form?campo=eq.valor&amp;campo2=eq.valor2</code></p>
     <p>Filtra los registros donde campo sea igual a <code>&lt;valor&gt;</code>.</p>
     <p>Campos disponibles para filtrar:</p>
     <ul>
-      <li>id</li><li>name</li><li>email* subject</li><li>age</li><li>message</li>
+      <li>id</li><li>name</li><li>email</li><li>subject</li><li>age</li><li>message</li>
     </ul>
 
     <h2>POST - form - Crear nuevo</h2>
-    <p><span class="method POST">POST</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/rest/v1/form</code></p>
+    <p><span class="method POST">POST</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form</code></p>
     <p>Crea un nuevo registro. Campos disponibles:</p>
     <ul>
-      <li><code>name</code> - opcional</li><li><code>email* subject</code> -  (obligatorio)</li><li><code>age</code> - opcional</li><li><code>message</code> -  (obligatorio)</li>
+      <li><code>name</code> - opcional</li><li><code>email</code> -  (obligatorio)</li><li><code>subject</code> -  (obligatorio)</li><li><code>age</code> - opcional</li><li><code>message</code> -  (obligatorio)</li>
     </ul>
     <p><strong>Body de ejemplo:</strong></p>
     <pre>{
   "name": "",
-  "email* subject": "",
+  "email": "",
+  "subject": "",
   "age": "",
   "message": ""
 }</pre>
 
     <h2>PATCH - form - Editar </h2>
-    <p><span class="method PATCH">PATCH</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/rest/v1/form?id=eq.&lt;id&gt;</code></p>
+    <p><span class="method PATCH">PATCH</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form?id=eq.&lt;id&gt;</code></p>
     <p>Actualiza el registro con el ID especificado. Puedes enviar uno o varios campos en el body:</p>
     <pre>{
   "name": "<nuevo string="">",
-  "email* subject": "<nuevo string="">",
+  "email": "<nuevo string="">",
+  "subject": "<nuevo string="">",
   "age": "<nuevo string="">",
   "message": "<nuevo string="">"
-}</nuevo></nuevo></nuevo></nuevo></pre>
+}</nuevo></nuevo></nuevo></nuevo></nuevo></pre>
 
     <h2>DELETE - form - Eliminar </h2>
-    <p><span class="method DELETE">DELETE</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/rest/v1/form?id=eq.&lt;id&gt;</code></p>
+    <p><span class="method DELETE">DELETE</span> <code>https://igvyycuzenqfitmvbezd.supabase.co/rest/v1/form?id=eq.&lt;id&gt;</code></p>
     <p>Elimina el registro con el ID especificado.</p>
 
 

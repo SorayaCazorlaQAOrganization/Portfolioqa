@@ -157,9 +157,9 @@ through <strong>SQL</strong>, and test automation with <strong>Python</strong>,
   <h2 id="contacttitle">
     <i class="fa fa-envelope"></i> Contact
   </h2>
-  <form action="/submit" method="post">
+  <form action="/submit" method="post" id="contactForm" onsubmit="return enviarFormulario(event)">
     
-    <input type="text" id="Name" name="Name" placeholder="Name"/>
+    <input type="text" id="name" name="name" placeholder="Name"/>
     <input type="email" id="email" Name="email" placeholder="Email" required/>
     <select id="subject" name="subject" required>
     <option value="" selected disabled>---</option>
